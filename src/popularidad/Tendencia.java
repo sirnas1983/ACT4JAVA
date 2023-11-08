@@ -11,7 +11,8 @@ public class Tendencia implements Popularidad {
     private final String LEYENDA = "Tendencia";
     @Override
     public Popularidad getPopularidad(Cancion cancion) {
-        Duration tiempo = Duration.between(cancion.getUltimaReproduccion(), LocalDateTime.now());
+        Duration tiempo = 
+            Duration.between(cancion.getUltimaReproduccion(), LocalDateTime.now());
         if(tiempo.toHours() > 24L){
             return new Normal();
         }
