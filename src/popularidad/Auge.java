@@ -3,8 +3,8 @@ import icono.Icono;
 import model.Cancion;
 
 public class Auge implements Popularidad {
-    private String ICONO = Icono.ROCKET.texto();
-    private String LEYENDA = "Auge";
+    private final String ICONO = Icono.ROCKET.texto();
+    private final String LEYENDA = "Auge";
 
     @Override
     public Popularidad getPopularidad(Cancion cancion) {

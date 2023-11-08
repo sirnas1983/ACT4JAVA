@@ -5,8 +5,8 @@ import model.Cancion;
 
 public class Normal implements Popularidad {
 
-    private String ICONO = Icono.MUSICAL_NOTE.texto();
-    private String LEYENDA = "Normal";
+    private final String ICONO = Icono.MUSICAL_NOTE.texto();
+    private final String LEYENDA = "Normal";
     @Override
     public Popularidad getPopularidad(Cancion cancion) {
         if(cancion.getReproducciones() > 1000){

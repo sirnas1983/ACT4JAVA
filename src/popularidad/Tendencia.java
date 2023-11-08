@@ -7,8 +7,8 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class Tendencia implements Popularidad {
-    private String ICONO = Icono.FIRE.texto();
-    private String LEYENDA = "Tendencia";
+    private final String ICONO = Icono.FIRE.texto();
+    private final String LEYENDA = "Tendencia";
     @Override
     public Popularidad getPopularidad(Cancion cancion) {
         Duration tiempo = Duration.between(cancion.getUltimaReproduccion(), LocalDateTime.now());

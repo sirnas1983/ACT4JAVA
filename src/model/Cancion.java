@@ -1,10 +1,11 @@
 package model;
 
+import java.time.LocalDateTime;
+import java.time.Year;
+
 import popularidad.Normal;
 import popularidad.Popularidad;
 
-import java.time.LocalDateTime;
-import java.time.Year;
 public class Cancion {
     private String nombre;
     private String album;
@@ -15,7 +16,6 @@ public class Cancion {
     private Integer likes;
     private Integer dislikes;
     private LocalDateTime ultimaReproduccion;
-
 
     public Cancion(){
         this.popularidad = new Normal();
@@ -33,11 +33,10 @@ public class Cancion {
         this.likes = likes;
         this.dislikes = dislikes;
     }
-
     public void reproducir(){
         this.popularidad = this.popularidad.getPopularidad(this);
         this.setUltimaReproduccion(LocalDateTime.now());
-        System.out.printf("Reproduciendo: %s - %s - %s\n", this.artista, this.album, this.nombre);
+        System.out.printf("%s - %s - %s\n", this.artista, this.album, this.nombre);
         System.out.println(this.popularidad.getLeyenda());
         this.reproducciones ++;
     }
@@ -95,11 +94,9 @@ public class Cancion {
     public void setDislikes(Integer dislikes) {
         this.dislikes = dislikes;
     }
-
     public LocalDateTime getUltimaReproduccion() {
         return ultimaReproduccion;
     }
-
     public void setUltimaReproduccion(LocalDateTime ultimaReproduccion) {
         this.ultimaReproduccion = ultimaReproduccion;
     }
